@@ -1,17 +1,18 @@
 import "./App.css";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 import { useState } from "react";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState("about");
+  const [current, setCurrent] = useState("about");
 
 
   return( 
     <div >
-      <Navigation selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
+      <Navigation current = {current} setCurrent = {setCurrent}/>
       <section style={{backgroundColor:'blue',height:'100vh'}}>
-
+        <Footer/>
       </section>
     </div>
     )

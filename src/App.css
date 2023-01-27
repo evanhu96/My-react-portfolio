@@ -36,9 +36,7 @@
     transform: rotate(360deg);
   }
 }
-*{
-  z-index: -10;
-}
+
 a{
   margin-right: 10px;
 }
@@ -47,8 +45,6 @@ a{
   position: relative;
   display: flex;
   justify-content: space-between;
-  z-index: 10;
-  /* background-color: rebeccapurple; */
 }
 
 .headerLinks{
@@ -56,8 +52,12 @@ a{
   bottom:0;
   right:0;
   width: 500px;
-  /* background-color: rebeccapurple; */
-  z-index: 100;
 
 }
 
+.social{
+  position: absolute;
+  bottom:0;
+  margin-left: 40%;
+
+}

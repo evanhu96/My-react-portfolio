@@ -39,6 +39,20 @@
 
 a{
   margin-right: 10px;
+  color: black;
+}
+p{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+form{
+  display: inline-block;
+  
+}
+
+il{
+  display: block;
 }
 
 .header{
@@ -59,5 +73,28 @@ a{
   position: absolute;
   bottom:0;
   margin-left: 40%;
+}
 
+.contact{
+  margin-left: 30px;
+}
+
+#projects{
+  display: flex;
+  justify-content: space-around;
+  vertical-align: auto;
+
+}
+
+.project{
+  height:200px;
+  width:200px;
+}
+#message{
+  height: 200px;
+  width: 400px;
+}
+#selfie{
+  height: 100px;
+  width: 150px;
 }

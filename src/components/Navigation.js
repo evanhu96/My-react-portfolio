@@ -1,20 +1,19 @@
-import AnchorLink from "react-anchor-link-smooth-scroll"
 
 const Link = ({ page,current, setCurrent})=>{
     const lowerC = page.toLowerCase()
     return(
-        <AnchorLink 
-        style={page==lowerC ? {color:'blue'} :{color:'black'}} 
+        <a
+        style={page==current ? {color:'blue'} :{color:'black'}} 
 
             href= {`#${lowerC}`} 
-            onClick={() => setCurrent(lowerC)}
+            onClick={()=> setCurrent(`${page}`)}
+            // onClick={() => console.log(current)}
         >
             {page}
-        </AnchorLink>
+        </a>
     )
 }
 const Navigation = ({current,setCurrent})=>{
-    // const navigationBackground = "bg-red"
 
     return(
         <nav style={{backgroundColor:'red'}}>
@@ -26,7 +25,7 @@ const Navigation = ({current,setCurrent})=>{
                         className="headerLink"
                         setCurrent={setCurrent}
                         current={current}
-                        page="about"
+                        page="About"
                         />
                         <Link
                         className="headerLink"
@@ -40,6 +39,7 @@ const Navigation = ({current,setCurrent})=>{
                         setCurrent={setCurrent}
                         current={current}
                         page="Contact"
+                        
                         />
                         <Link
                         className="headerLink"

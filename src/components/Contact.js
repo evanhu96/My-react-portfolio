@@ -39,6 +39,12 @@ const Contact = ({ lastClick, setLastClick }) => {
   const handleSubmit = (e) => {
     console.log(name, email, message);
     document.getElementById("alert").setAttribute("hidden",'');
+    const mailformat = /^\S+@\S+$/
+    if(email.match(mailformat)){
+        console.log('hey');
+    }else{
+        alert('please enter valid email')
+    }
     e.preventDefault();
   };
 
@@ -60,7 +66,7 @@ const Contact = ({ lastClick, setLastClick }) => {
           className="contact"
           id="email"
           onClick={(e) => setLastClick(`${e.target.id}`)}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           ref={refTwo}
         />
         <div>message:</div>
@@ -69,7 +75,7 @@ const Contact = ({ lastClick, setLastClick }) => {
           id="message"
           className="contact"
           onClick={(e) => setLastClick(`${e.target.id}`)}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setMessage(e.target.value)}
           ref={refThree}
         />
         <div>
